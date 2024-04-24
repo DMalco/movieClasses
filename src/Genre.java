@@ -9,6 +9,8 @@ public enum Genre {
     Romance,
     Bollywood,
     Noir,
+    Animated,
+    Fantasy,
 
 
 

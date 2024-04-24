@@ -2,9 +2,9 @@ import java.time.LocalDate;
 
 public class Actor extends Person {
 
-        public Actor(String aName, String aNationality, LocalDate aYearOfBirth)
+        public Actor(String aName, String aNationality, LocalDate aDateOfBirth)
         {
-            super(aName, aNationality, aYearOfBirth);
+            super(aName, aNationality, aDateOfBirth);
         }
 
 
