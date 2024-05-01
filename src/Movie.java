@@ -6,18 +6,18 @@ public class Movie {
     LocalDate releaseDate;
     private int length;
     private HashSet<Genre> genres; //Movie has genres - composition
-
-    private HashSet<Director> directors;
-    private HashSet<Actor> actors;
+    private HashSet<Person> people;
 
 
-    public Movie(String aTitle, LocalDate aReleaseDate, int aLength, HashSet<Genre> genres, HashSet<Director> directors, HashSet<Actor> actors)  {
+
+    public Movie(String aTitle, LocalDate aReleaseDate, int aLength, HashSet<Genre> genres, HashSet<Person> people)  {
         this.title = aTitle;
         this.releaseDate = aReleaseDate;
         this.length = aLength;
         this.genres = genres;
-        this.directors = directors;
-        this.actors = actors;
+
+
+        this.people = people;
     }
 
     /**
@@ -58,25 +58,20 @@ public class Movie {
         this.genres.add(g);
     }
 
-    public HashSet<Director> getDirectors(){
-        return this.directors;
-    }
-
-    public void addDirector(Director d)
+    public void addPerson(Person p) //dynamic polymorphism
     {
-        this.directors.add(d);
+        this.people.add(p);
     }
 
-    public HashSet<Actor> getActors()
+    public void listPeople()
     {
-        return  this.actors;
+        for (Person p :this.people)
+        {
+            System.out.println(p.getName());
+        }
     }
 
-    public void addActor(Actor a)
-    {
-        this.actors.add(a);
-    }
-
+/*
     @Override
     public String toString(){
         return "Movie title: " + getTitle() + "\nreleased: " + getReleaseDate() + "\nGenre: " + getGenres() + "\nDirected by: " +
@@ -84,7 +79,8 @@ public class Movie {
 
         //build a string by going over hashset
 
-    }
+    }*/
+
 
 
 
